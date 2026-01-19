@@ -1,0 +1,9 @@
+[package]
+name = "quickbeam"
+author = "Sebastian Wildwood"
+description = "A simple command-line utility to output the tree structure of a folder into plain-text."
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.54", features = ["derive"] }
