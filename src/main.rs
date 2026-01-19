@@ -60,7 +60,7 @@ fn process_folder(
     }
 
     for entry in fs::read_dir(folder)? {
-        let entry = entry.unwrap();
+        let Ok(entry) = entry else { continue };
         let path = entry.path();
         if is_valid_dir(&path) {
             println!("{}{}", prefix, path.file_name().unwrap().to_str().unwrap());
